@@ -1,0 +1,21 @@
+origin,destination,nm_distance,frontier_serves,notes
+DEN,LAS,628,yes,F9 daily; high frequency competition w/ NK
+DEN,PHX,602,yes,F9 multiple daily; strong leisure
+DEN,MCO,1545,yes,F9 daily; head-to-head NK
+DEN,ATL,1199,yes,F9 daily; legacy competition (DL)
+DEN,LAX,862,yes,F9 daily; strong O&D
+DEN,SEA,1024,yes,F9 daily; legacy competition (AS,AA,DL,UA)
+DEN,JFK,1626,no,Whitespace candidate; legacy heavy (B6,DL)
+DEN,BOS,1751,yes,F9 daily; legacy heavy
+DEN,MSP,680,yes,F9 daily; DL hub
+DEN,DFW,641,yes,F9 daily; AA hub
+DEN,IAH,860,yes,F9 daily; UA hub
+DEN,SLC,371,no,Stage too short; UA hub
+DEN,SAN,853,yes,F9 daily; leisure
+DEN,SFO,949,yes,F9 daily; legacy comp
+DEN,TPA,1505,yes,F9 daily; leisure
+DEN,RSW,1525,yes,F9 seasonal; leisure
+DEN,FLL,1657,yes,F9 daily; head-to-head NK
+DEN,PDX,991,yes,F9 daily; AS,UA comp
+DEN,STL,769,yes,F9 daily; WN comp
+DEN,CLT,1338,no,Whitespace candidate; AA hub
