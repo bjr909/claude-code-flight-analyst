@@ -10,15 +10,15 @@ Drop any of these into Claude Code (running in this folder so the Google Flights
 
 ## 2. Head-to-head competitor check
 
-> For DEN→ATL on <DATE>, get the cheapest fare from Frontier, Spirit, and Delta. Then do the same for the same date 7, 14, and 30 days out. Tell me where Frontier is undercutting and where it's leaving money on the table.
+> For DEN→ATL on <DATE>, get the cheapest fare from each major carrier serving the route. Then do the same for the same date 7, 14, and 30 days out. Tell me where the ULCCs are undercutting and where they're leaving money on the table.
 
 ## 3. Saturday night special finder
 
-> From DEN, find every market where the cheapest round-trip departing this Friday and returning Sunday night is under $79. Sort by price. Skip anything Frontier already flies daily.
+> From DEN, find every market where the cheapest round-trip departing this Friday and returning Sunday night is under $79. Sort by price. Limit to non-stop only.
 
 ## 4. Stage-length vs price sanity check
 
-> Search the cheapest one-way DEN→<DEST> fares for the next 30 days for these markets: <list 5–10 markets>. Compute a $/mile metric. Flag any market where Frontier is pricing dramatically above or below the $/mile median.
+> Search the cheapest one-way DEN→<DEST> fares for the next 30 days for these markets: <list 5–10 markets>. Compute a $/mile metric. Flag any market where pricing is dramatically above or below the $/mile median.
 
 ## 5. Day-of-week schedule pressure test
 
@@ -34,15 +34,15 @@ Drop any of these into Claude Code (running in this folder so the Google Flights
 
 ## 8. New-route whitespace scan
 
-> Take the airports in `data/sample-routes.csv`. For each pair Frontier does NOT currently fly, search the cheapest competitor fare in the next 30 days. Surface 5 markets where the lowest published fare is over $200 — those have pricing room.
+> Take the airports in `data/sample-routes.csv`. For each pair where the `legacy_serves` column says "no", search the cheapest competitor fare in the next 30 days. Surface 5 markets where the lowest published fare is over $200 — those have pricing room.
 
 ## 9. Bag-fee parity model
 
-> Pull the cheapest DEN→LAS round-trip on Frontier and Southwest for next Friday return Sunday. Add Frontier's typical carry-on fee ($55) and a checked bag ($60). Compare all-in cost. Where does Frontier still win?
+> Pull the cheapest DEN→LAS round-trip on a typical ULCC and a non-ULCC for next Friday return Sunday. Add a typical ULCC carry-on fee ($55) and a checked bag ($60). Compare all-in cost. Where does the ULCC still win?
 
 ## 10. Network resilience drill
 
-> If DEN closed for 24 hours next Tuesday, which Frontier routes have the cheapest available alternative routings via DFW, ORD, or LAS? Build a CSV of swap options.
+> If DEN closed for 24 hours next Tuesday, which routes have the cheapest available alternative routings via DFW, ORD, or LAS? Build a CSV of swap options.
 
 ## 11. Build me a tool
 
@@ -50,15 +50,15 @@ Drop any of these into Claude Code (running in this folder so the Google Flights
 
 ## 12. Slack-style daily digest
 
-> Every time I run this prompt, give me a 6-bullet "morning brief" for Frontier route analysts: cheapest new fares posted, biggest competitor moves on top-50 routes, and any anomaly worth watching.
+> Every time I run this prompt, give me a 6-bullet "morning brief" for an airline route analyst: cheapest new fares posted, biggest competitor moves on top-50 routes, and any anomaly worth watching.
 
-## 13. Frontier vs Spirit network overlap
+## 13. ULCC vs ULCC overlap
 
-> List 20 markets where both Frontier and Spirit publish service from DEN. For each, pull their cheapest fares for the next 30 days. Compute the average gap. Are we systematically high or low?
+> List 20 markets where two major US ULCCs both publish service from DEN. For each, pull their cheapest fares for the next 30 days. Compute the average gap. Which carrier is systematically pricing higher?
 
-## 14. Ancillary revenue sniff test
+## 14. Subscription pass sniff test
 
-> When I see Frontier's "GoWild" pass advertised, model the ROI: assume a $599 annual GoWild and pull 12 sample DEN-out round-trips at flexible dates. What's the average cash fare we're displacing?
+> Some ULCCs sell an "all-you-can-fly" annual pass for ~$599 with standby-only seats. Model the ROI: pull 24 cheap DEN-out round-trips at flexible dates, compute the average cash fare being displaced, and tell me how many trips per year someone would need before the pass pays off.
 
 ## 15. Bring me your own question
 

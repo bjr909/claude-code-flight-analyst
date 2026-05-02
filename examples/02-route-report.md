@@ -6,7 +6,7 @@ Goal: turn a list of routes into a one-page scorecard you could show a network p
 
 ## The setup
 
-There's a sample dataset at `data/sample-routes.csv` with 20 city pairs. Pretend these are routes Frontier is *considering*.
+There's a sample dataset at `data/sample-routes.csv` with 20 city pairs. Treat them as routes a hypothetical airline is *considering*.
 
 ---
 
@@ -19,15 +19,16 @@ Read data/sample-routes.csv. For each route, use the fli MCP to pull:
 
   - cheapest one-way fare in the next 21 days
   - cheapest carrier on that fare
-  - whether Frontier is among carriers serving the route in the next 21 days
+  - whether any legacy carrier is among carriers serving the route
+    in the next 21 days
 
 Then build me a markdown scorecard called REPORT.md with:
 
   - Routes ranked by cheapest published competitor fare (highest first
     = most pricing room)
-  - A "Frontier Status" column: serving / not serving
+  - A "Legacy Status" column: serving / not serving
   - A "Whitespace Score" 0–10 that combines: high competitor fare,
-    Frontier not serving, and stage length under 1500 miles
+    legacy not serving, and stage length under 1500 miles
   - A short executive summary at the top: top 3 opportunities and why
 
 Be honest about which fields you couldn't fill in.
@@ -55,8 +56,8 @@ Once you have REPORT.md, push back:
 
 ```
 Recompute the Whitespace Score with stage length under 1000 miles
-(closer to Frontier's typical sweet spot) and weight competitor fare
-2x heavier than route absence. Update REPORT.md.
+(closer to a typical ULCC sweet spot) and weight competitor fare 2x
+heavier than route absence. Update REPORT.md.
 ```
 
 Claude will iterate without redoing the data pulls (it remembers what
@@ -67,8 +68,9 @@ spreadsheet exercise and starts being a conversation.
 
 ## Take this further
 
-Replace `sample-routes.csv` with a real Frontier prospect list. Same
-prompt, same workflow. You now have a repeatable analysis you can run
-weekly.
+Ask Claude to build you a synthetic route list — *"give me 30 city
+pairs across the lower 48 with a mix of stage lengths, then run the
+same scorecard."* You don't need a real route list to get value;
+you can prototype on anything.
 
-Next: [`03-frontier-playbook.md`](./03-frontier-playbook.md).
+Next: [`03-ulcc-playbook.md`](./03-ulcc-playbook.md).

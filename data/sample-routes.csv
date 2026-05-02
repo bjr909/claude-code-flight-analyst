@@ -1,21 +1,21 @@
-origin,destination,nm_distance,frontier_serves,notes
-DEN,LAS,628,yes,F9 daily; high frequency competition w/ NK
-DEN,PHX,602,yes,F9 multiple daily; strong leisure
-DEN,MCO,1545,yes,F9 daily; head-to-head NK
-DEN,ATL,1199,yes,F9 daily; legacy competition (DL)
-DEN,LAX,862,yes,F9 daily; strong O&D
-DEN,SEA,1024,yes,F9 daily; legacy competition (AS,AA,DL,UA)
-DEN,JFK,1626,no,Whitespace candidate; legacy heavy (B6,DL)
-DEN,BOS,1751,yes,F9 daily; legacy heavy
-DEN,MSP,680,yes,F9 daily; DL hub
-DEN,DFW,641,yes,F9 daily; AA hub
-DEN,IAH,860,yes,F9 daily; UA hub
-DEN,SLC,371,no,Stage too short; UA hub
-DEN,SAN,853,yes,F9 daily; leisure
-DEN,SFO,949,yes,F9 daily; legacy comp
-DEN,TPA,1505,yes,F9 daily; leisure
-DEN,RSW,1525,yes,F9 seasonal; leisure
-DEN,FLL,1657,yes,F9 daily; head-to-head NK
-DEN,PDX,991,yes,F9 daily; AS,UA comp
-DEN,STL,769,yes,F9 daily; WN comp
-DEN,CLT,1338,no,Whitespace candidate; AA hub
+origin,destination,nm_distance,legacy_serves,notes
+DEN,LAS,628,yes,High frequency leisure market; multiple ULCCs + legacies
+DEN,PHX,602,yes,Strong leisure; AA/UA/WN/ULCC overlap
+DEN,MCO,1545,yes,Long-haul leisure; ULCCs prominent
+DEN,ATL,1199,yes,Heavy DL presence; ULCC head-to-head
+DEN,LAX,862,yes,Strong O&D + connecting
+DEN,SEA,1024,yes,AS/AA/DL/UA + ULCC entrants
+DEN,JFK,1626,yes,B6/DL heavy; whitespace candidate for ULCC
+DEN,BOS,1751,yes,Legacy-heavy long-haul
+DEN,MSP,680,yes,DL hub
+DEN,DFW,641,yes,AA hub; high frequency
+DEN,IAH,860,yes,UA hub
+DEN,SLC,371,yes,Short stage; UA hub
+DEN,SAN,853,yes,Leisure; legacy + ULCC
+DEN,SFO,949,yes,Tech corridor; legacy comp
+DEN,TPA,1505,yes,Florida leisure
+DEN,RSW,1525,yes,Seasonal Florida leisure
+DEN,FLL,1657,yes,South Florida; ULCC head-to-head
+DEN,PDX,991,yes,AS/UA legacy
+DEN,STL,769,yes,WN heavy
+DEN,CLT,1338,yes,AA hub; whitespace candidate for ULCC

@@ -19,9 +19,9 @@ The first time, it'll ask you to approve `.mcp.json`. Say yes.
 ## Step 2 — Paste this prompt
 
 ```
-Use the fli MCP to find the cheapest one-way DEN→LAS fare on Frontier
-in the next 14 days. Tell me the date, fare, and how it compares to
-the cheapest non-Frontier option on the same date.
+Use the fli MCP to find the cheapest one-way DEN→LAS fare in the
+next 14 days. Tell me the date, fare, and how it compares to the
+two next-cheapest carriers on the same date.
 ```
 
 ---
